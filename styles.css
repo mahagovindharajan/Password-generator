@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #5450ce 0%, #6f7d12 50%, #d233bd 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: rgb(235, 228, 220);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.password-display {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+#password {
+  flex: 1;
+  font-family: 'Courier New', monospace;
+  font-size: 1.2rem;
+  color: #333;
+  word-break: break-all;
+  min-height: 28px;
+}
+
+.copy-btn {
+  background: #4361ee;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.copy-btn:hover {
+  background: #3a56d4;
+  transform: scale(1.05);
+}
+
+.copy-btn.copied {
+  background: #2ecc71;
+}
+
+.length-container {
+  margin-bottom: 25px;
+}
+
+.length-container label {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.length-options {
+  display: flex;
+  gap: 10px;
+}
+
+.length-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: 2px solid #e9ecef;
+  background: #f8f9fa;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.length-btn:hover {
+  border-color: #4361ee;
+  background: #f0f4ff;
+}
+
+.length-btn.active {
+  background: #4361ee;
+  border-color: #4361ee;
+  color: white;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.option input[type="checkbox"] {
+  display: none;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.option input:checked + .checkmark {
+  background: #4361ee;
+  border-color: #4361ee;
+}
+
+.checkmark::after {
+  content: '✓';
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.option input:checked + .checkmark::after {
+  opacity: 1;
+}
+
+.option span:last-child {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #4361ee, #3a56d4);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(67, 97, 238, 0.4);
+}
+
+.generate-btn:active {
+  transform: translateY(0);
+}
+
+.strength-bar {
+  margin-top: 20px;
+}
+
+.strength-bar label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.strength-meter {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+.strength-text {
+  text-align: right;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
