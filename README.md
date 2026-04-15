@@ -22,18 +22,6 @@ A simple and responsive password generator web application that helps users crea
 - CSS  
 - JavaScript  
 
----
-
-## 📸 Screenshot
-(Add your project screenshot here)
-
----
-
-## 🌐 Live Demo
-(Add your deployed project link here)
-
----
-
 ## 📂 How to Use
 1. Select password length  
 2. Choose required options (uppercase, numbers, etc.)  
