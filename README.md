@@ -36,4 +36,4 @@ This project is built to practice frontend development skills and understand how
 ---
 
 ## 🙌 Author
-Maha G
+MAHA G
